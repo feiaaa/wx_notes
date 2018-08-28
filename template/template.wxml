@@ -1,0 +1,13 @@
+<template name="footer1">
+
+<view class="weui-panel weui-panel_access">
+	<view class="weui-panel__hd">2.3.1 模板：这里是footer</view>
+	<view class="weui-panel__bd">
+		<view class="weui-media-box weui-media-box_text">
+			<view class="weui-media-box__title weui-media-box__title_in-text">绑定数据{{ tempstr}}</view>
+			<view class="weui-media-box__desc">在调用模板页的地方，关联绑定数据的值。在template.js的data里书写无效</view>
+		</view>
+	</view>
+</view>
+
+</template>

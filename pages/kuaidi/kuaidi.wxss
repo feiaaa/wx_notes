@@ -1,0 +1,3 @@
+/* pages/kuaidi/kuaidi.wxss */
+.container{width: 98%;margin: 0 auto}
+input[type="text"]{width: 100%;border: 1px solid red}
