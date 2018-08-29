@@ -1,8 +1,10 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/kuaidi/kuaidi"
+    "pages/logs/logs",    
+    "pages/me/me",
+    "pages/kuaidi/kuaidi",
+    "pages/login/login"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -18,11 +20,10 @@
       {
         "pagePath": "pages/logs/logs",
         "text": "日志"
-      },
+      },      
       {
-        "pagePath": "pages/kuaidi/kuaidi",
-        "text": "查询接口"
-      
+        "pagePath": "pages/me/me",
+        "text": "我的"
       
     }]
   },

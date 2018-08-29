@@ -10,7 +10,8 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     item: { tempstr:'copyright 2018'},
     show:false,
-    showAppDatas:"1111"
+    showAppDatas:"1111",
+    testId:1
   },
   //事件处理函数
   bindViewTap: function() {
@@ -60,6 +61,12 @@ Page({
   onShow:function(){
     console.log("onshow page==============");
   },
+  onHide: function () {
+    console.log("onhide page==============");
+  },
+  onUnload:function(){
+    console.log("onunload page==============");
+  },
   getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
@@ -77,5 +84,16 @@ Page({
         showAppDatas: appDatas
       })
     })
+  },
+  jumpToRequest:function(){
+    wx.navigateTo({
+      url: '../kuaidi/kuaidi',
+    })
+  },
+  jumpToNavigate:function(e) {
+    wx.navigateTo({
+      url: '../kuaidi/kuaidi?id=' + e.currentTarget.id,
+    })
   }
+  
 })

@@ -30,11 +30,15 @@ Page({
       postid:e.detail.value
     })
   },
-  onLoad: function () {
-    // this.setData({
-    //   logs: (wx.getStorageSync('logs') || []).map(log => {
-    //     return util.formatTime(new Date(log))
-    //   })
-    // })
+  onLoad: function (options) {
+    console.log(options,'options');
+    if(options.id)
+    {
+      this.setData({
+        postid: options.id,
+      })
+      this.chaxun();
+    }
+    
   }
 })

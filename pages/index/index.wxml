@@ -26,6 +26,7 @@
       </view>
     </view>
     <!--冒泡end-->
+    
     <view class="weui-panel weui-panel_access">
       <view class="weui-panel__hd">3.2.1 公共方法调用 getApp （点击后数据变化）</view>
       <view class="weui-panel__bd">
@@ -39,6 +40,31 @@
       <!--公共方法end-->
 
     </view>
+
+    <view class="weui-panel weui-panel_access">
+      <view class="weui-panel__hd">综合实例</view>
+      <view class="weui-panel__bd">
+        <view class="weui-cell weui-cell_access" bindtap="jumpToRequest">
+          <view class="weui-cell__bd">
+            2.4.1 查询
+          </view>
+          <view class="weui-cell__ft weui-cell__ft_in-access" >wx.request</view>
+        </view>
+        <view class="weui-cell weui-cell_access" id="{{testId}}" bindtap="jumpToNavigate">
+          <view class="weui-cell__bd">
+            3.2.2 路由跳转带链接
+          </view>
+          <view class="weui-cell__ft weui-cell__ft_in-access" >wx.navigateTo url?id=X</view>
+        </view>
+        <navigator class="weui-cell weui-cell_access" url="../login/login">
+          <view class="weui-cell__bd">
+            3.2.2 navigator跳转带坑
+          </view>
+          <view class="weui-cell__ft weui-cell__ft_in-access" >去不了tabBar上的页面</view>
+        </navigator>
+      </view>
+    </view>
+    <!--冒泡end-->
 
   </view>
   <view class="page__ft">

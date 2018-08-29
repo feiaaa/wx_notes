@@ -4,12 +4,23 @@
     <view class="page__desc">输入1-11的数字;使用前在设置中 勾上 “不校验合法域名”</view>
   </view>
   <view class="page__bd page__bd_spacing">
-
-    <input placeholder='pls input 1-11' type='text' bindinput='input'></input>
-    <button type='primary' bindtap='chaxun' size='mini'>查询</button>
+    <view class="weui-cell weui-cell_access">
+      <view class="weui-cell__bd">
+        <input placeholder='pls input 1-11' type='text' bindinput='input'></input>
+      </view>
+      <view class="weui-cell__ft">
+        <button type='primary' bindtap='chaxun' size='mini'>查询</button>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_access">
+      <view class="weui-cell__bd">
+        你当前输入的是
+      </view>
+      <view class="weui-cell__ft">{{postid}}</view>
+    </view>
   </view>
   <view class="page__bd">
-    <view class="weui-cells__title">查询结果</view>
+      <view class="weui-cells__title">查询结果</view>
 
     <scroll-view scroll-y="true" height="400">
       <view class="weui-cells weui-cells_after-title" wx:for="{{resInfo}}" wx:key="{{item.wordId}}">
