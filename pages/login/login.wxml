@@ -1,2 +1,42 @@
-<!--pages/login/login.wxml-->
-<text>pages/login/login.wxml</text>
+<view class='page'>
+  <view class='page__hd'>
+    <view class="page__title">登录页</view>
+    <view class="page__desc">
+      此处为一个登录页面。视频中只是通过setdata的方式，改变了登录状态，但是本体并未和服务器进行交互动。(真实情况下需要appId和自备服务器域名)
+    </view>
+  </view>
+  <!--hd end-->
+  <view class='page__bd'>
+    <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">错误提示</view>
+    <view class="weui-cells">
+      <form bindsubmit="showTopTips">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">用户名</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="用户名/手机号/邮箱" bindinput='getUsrName' />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">密码</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" password bindinput='getPw' />
+          </view>
+        </view>
+        
+      </form>
+    </view>
+    <view class="weui-btn-area">
+      <button class="weui-btn" type="primary" formType="submit">确定</button>
+    </view>
+  </view>
+  <view class='page__ft'>
+    <view class="weui-cells__title">快速登录</view>
+    <view class="weui-cells weui-cells_after-title">
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    </view>
+  </view>
+</view>

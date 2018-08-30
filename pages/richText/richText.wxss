@@ -1,0 +1,2 @@
+/* pages/richText/richText.wxss */
+rich-text .img{max-width: 100%}

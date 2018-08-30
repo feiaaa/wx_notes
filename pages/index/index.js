@@ -8,6 +8,7 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    
     item: { tempstr:'copyright 2018'},
     show:false,
     showAppDatas:"1111",

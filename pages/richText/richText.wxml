@@ -1,0 +1,11 @@
+<view class='page'>
+  <view class='page__hd'>
+    <view class="page__title">富文本richText</view>
+    <view class="page__desc">
+    【注意】文本内容中view标签不被支持；css样式，只支持class,style ，id不支持。（实际测下来，元素标签也不支持）
+    </view>
+  </view><!--hd end-->
+  <view class='page__bd page__bd_spacing'>
+    <rich-text nodes="{{myrich}}"></rich-text>
+  </view>
+</view>

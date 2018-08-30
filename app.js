@@ -41,7 +41,8 @@ App({
     console.log('=======onhide app===========')
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    openId:false
   },
   showDataFunc:function(cb){
     //return this.showData.appDatas;

@@ -1,13 +1,29 @@
 <view class='page'>
   <view class='page__hd'>
     <view class="userinfo">
-      <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-      <block wx:else>
-        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-      </block>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+
     </view>
-  </view><!--hd end-->
+  </view>
+  <!--hd end-->
   <view class='page__bd'>
+    <view class="weui-panel weui-panel_access">
+      
+      <view class="weui-panel__bd">
+      <view class="weui-cell weui-cell_access">
+          <view class="weui-cell__bd">
+            设置
+          </view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </view>
+        <view class="weui-cell weui-cell_access">
+          <view class="weui-cell__bd">
+            登出账号
+          </view>
+          <view class="weui-cell__ft"><button bindtap='clickEvents'class="weui-btn" type="default" size="mini">退出</button></view>
+        </view>
+      </view>
+    </view>
   </view>
 </view>
