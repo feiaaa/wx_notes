@@ -1,11 +1,13 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs",    
+    "pages/navi/index",    
     "pages/me/me",
     "pages/kuaidi/kuaidi",
+    "pages/logs/logs",
     "pages/login/login",
-    "pages/richText/richText"
+    "pages/richText/richText",
+    "pages/audio/audio"
 
   ],
   "window":{
@@ -20,8 +22,8 @@
       "text": "首页"
      },
       {
-        "pagePath": "pages/logs/logs",
-        "text": "日志"
+        "pagePath": "pages/navi/index",
+        "text": "列表"
       },      
       {
         "pagePath": "pages/me/me",

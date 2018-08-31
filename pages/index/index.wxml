@@ -1,81 +1,26 @@
 <!--index.wxml-->
 <view class="page">
-  <view class="page__hd">
-    <view class="userinfo">
-      <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-      <block wx:else>
-        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-      </block>
-    </view>
-    <view class="page__title">{{motto}}</view>
-    <view class="page__desc">
-    此处为建立快速模板时默认的内容；getUserInfo调用用户信息在18年5月有新规（要用户手动同意以后才能获取），注意更新以后的范例代码
-    </view>
-  </view>
-  <view class="page__bd">
-    <view class="weui-panel weui-panel_access">
-      <view class="weui-panel__hd">2.3.2冒泡事件：点击子元素的事件，会触发父元素的事件；见console </view>
-      <view class="weui-panel__bd">
-        <view class="weui-cell weui-cell_access" id='clickView1' bindtap='clickEvents2' style='background:green'>
-          <view class="weui-cell__bd">
-            <button bindtap='clickEvents' id='clickBtn1' class="weui-btn" type="primary" size="mini">click</button>
-          </view>
-          <view class="weui-cell__ft">{{show}} shows</view>
-        </view>
-      </view>
-    </view>
-    <!--冒泡end-->
-    
-    <view class="weui-panel weui-panel_access">
-      <view class="weui-panel__hd">3.2.1 公共方法调用 getApp （点击后数据变化）</view>
-      <view class="weui-panel__bd">
-        <view class="weui-cell weui-cell_access">
-          <view class="weui-cell__bd">
-            <button bindtap='clickPublicFunc' class="weui-btn" type="primary" size="mini">获取app方法</button>
-          </view>
-          <view class="weui-cell__ft"> {{showAppDatas}}</view>
-        </view>
-      </view>
-      <!--公共方法end-->
 
-    </view>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-dots="true">
+    <block wx:for="{{imgUrls}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="contianer ">
+    <view class='tuijian'>
+      <view class="weui-item" wx:for="{{tuijianUrls}}" wx:key="index">
 
-    <view class="weui-panel weui-panel_access">
-      <view class="weui-panel__hd">综合实例</view>
-      <view class="weui-panel__bd">
-        <view class="weui-cell weui-cell_access" bindtap="jumpToRequest">
-          <view class="weui-cell__bd">
-            2.4.1 查询
-          </view>
-          <view class="weui-cell__ft weui-cell__ft_in-access" >wx.request</view>
-        </view>
-        <view class="weui-cell weui-cell_access" id="{{testId}}" bindtap="jumpToNavigate">
-          <view class="weui-cell__bd">
-            3.2.2 路由跳转带链接
-          </view>
-          <view class="weui-cell__ft weui-cell__ft_in-access" >wx.navigateTo url?id=X</view>
-        </view>
-        <navigator class="weui-cell weui-cell_access" url="../login/login">
-          <view class="weui-cell__bd">
-            3.2.2 navigator跳转带坑
-          </view>
-          <view class="weui-cell__ft weui-cell__ft_in-access" >去不了tabBar上的页面</view>
-        </navigator>
-         <navigator class="weui-cell weui-cell_access" url="../richText/richText">
-          <view class="weui-cell__bd">
-            4.3.3 富文本
-          </view>
-          <view class="weui-cell__ft weui-cell__ft_in-access" >richText</view>
-        </navigator>
+        <image src="{{item.url}}" class="tuijian-image" />
+        <text>{{item.title}}</text>
       </view>
     </view>
-    <!--冒泡end-->
 
   </view>
+
   <view class="page__ft">
-    <import src="../../template/template" />
-    <template is="footer1" data="{{...item}}" />
+
   </view>
 
 </view>

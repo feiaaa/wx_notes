@@ -1,0 +1,8 @@
+/* pages/audio/audio.wxss */
+.page__ft{
+  padding-bottom: 0px;
+  position: fixed;bottom: 0;
+  background: white;
+  width: 100%
+  }
+  audio{padding-bottom: 0px;}
