@@ -1,19 +1,57 @@
 <!--index.wxml-->
 <view class="page">
+  <view class='mgb10'>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-dots="true">
+      <block wx:for="{{tuijianUrls}}" wx:key="index">
+        <swiper-item>
+          <image src="{{item.url}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
 
-  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-dots="true">
-    <block wx:for="{{imgUrls}}" wx:key="index">
-      <swiper-item>
-        <image src="{{item}}" class="slide-image" />
-      </swiper-item>
-    </block>
-  </swiper>
-  <view class="contianer ">
-    <view class='tuijian'>
-      <view class="weui-item" wx:for="{{tuijianUrls}}" wx:key="index">
+  <view class="page__bd  page__bd_spacing">
+    <view class="weui-cells__title">
+      <view class="container">
+        <view>
+          <text>精选评测</text>
+        </view>
+        <view>
+          <navigator url="../list/list">更多>></navigator>
+        </view>
+      </view>
+    </view>
+    <view class="container">
+      <view class="container-item" wx:for="{{tuijianUrls}}" wx:key="index">
+        <image src="{{item.url}}" class="container-image" />
+        <view class="text">
+          <text>{{item.title}}</text>
+        </view>
+      </view>
+    </view>
 
-        <image src="{{item.url}}" class="tuijian-image" />
-        <text>{{item.title}}</text>
+    <view class="weui-cells__title">
+      <view class="container">
+        <view>
+          <text>热门评测</text>
+        </view>
+        <view>
+          <navigator url="../list/list">更多>></navigator>
+        </view>
+      </view>
+    </view>
+    <view class="container2">
+      <view class="container-item mgb10" wx:for="{{tuijianUrls}}" wx:key="index">
+        <view class="container-image">
+          <image src="{{item.url}}" />
+        </view>
+
+        <view class="text">
+          <text>{{item.title}}</text>
+        </view>
+        <view class="text2">
+          <text>{{item.content}}</text>
+        </view>
       </view>
     </view>
 

@@ -80,6 +80,12 @@
           </view>
           <view class="weui-cell__ft weui-cell__ft_in-access" >audio</view>
         </navigator>
+        <navigator class="weui-cell weui-cell_access" url="../map/map">
+          <view class="weui-cell__bd">
+            4.4.4 地图
+          </view>
+          <view class="weui-cell__ft weui-cell__ft_in-access" >audio</view>
+        </navigator>
       </view>
     </view>
     <!--冒泡end-->

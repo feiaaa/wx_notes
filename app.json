@@ -7,13 +7,14 @@
     "pages/logs/logs",
     "pages/login/login",
     "pages/richText/richText",
-    "pages/audio/audio"
+    "pages/audio/audio",
+    "pages/map/map"
 
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "小程序的名字",
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
